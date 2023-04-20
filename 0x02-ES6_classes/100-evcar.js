@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import Car from './10-car';
 
 export default class EVCar extends Car {
@@ -6,8 +7,7 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
-  // eslint-disable-next-line
-	cloneCar() {
-    return new Car[Symbol.species]();
+  cloneCar() {
+    return new Car();
   }
 }
